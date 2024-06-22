@@ -1,0 +1,439 @@
+:root {
+  --purple_color: #8151e5;
+  --lightpurple_color: #9d75f3;
+  --btnlightpurple_color: #c0a1ff;
+  --green_color: #3ceaaf;
+  --gray_color: #dbdbdb;
+  --darkgray_color: #828282;
+  --white_color: #ffffff;
+  --black_color: rgb(25, 25, 25);
+  --dynamic_height: 100vh;
+  --custom_border_radius: 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+body {
+  height: var(--dynamic_height);
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  width: 10rem;
+  position: absolute;
+  margin-top: 1%;
+}
+
+.triangles {
+  position: relative;
+}
+
+.first_triangle {
+  clip-path: polygon(0 57%, 0% 100%, 100% 100%);
+  background-color: var(--purple_color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--dynamic_height);
+}
+
+.second_triangle {
+  clip-path: polygon(100% 59%, 38% 100%, 100% 100%);
+  background-color: var(--green_color);
+  height: var(--dynamic_height);
+}
+
+.log_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.log_img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.log_form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 110%;
+}
+
+.log_header {
+  padding: 0 1.5rem;
+}
+
+.con_form {
+  position: absolute;
+  height: 68vh;
+  width: 75%;
+  margin: auto;
+  bottom: 0;
+  left: 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  right: 0;
+  top: 5rem;
+  /* background-color: var(--white_color); */
+  border-radius: var(--custom_border_radius);
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+}
+
+.form_group {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.standing_line_break {
+  position: absolute;
+  height: 59vh;
+  width: 0;
+  background-color: var(--gray_color);
+  padding: 1px;
+  top: 6%;
+  margin: auto 0;
+}
+
+.Line_tab {
+  width: 2rem;
+  border-top: 3px solid var(--purple_color);
+  display: block;
+  border-radius: 1%;
+}
+
+.terms_use {
+  text-align: center;
+}
+
+.sign_txt {
+  text-align: center;
+}
+
+.forgo_password {
+  text-align: center;
+}
+
+.inpt_grup {
+  margin: 2rem 0;
+}
+
+.log_btn {
+  outline: none;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  background-color: var(--purple_color);
+  color: var(--white_color);
+  transition: 0.3s;
+}
+
+.log_btn:hover {
+  background-color: var(--btnlightpurple_color);
+}
+.log_btn:focus {
+  background: var(--btnlightpurple_color);
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.spn_log_txt {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.form_control {
+  outline: none;
+  border: 1px solid var(--gray_color);
+  padding: 0.7rem;
+  width: 100%;
+  border-radius: 2rem;
+  letter-spacing: 0.1rem;
+  background-color: var(--white_color);
+  color: var(--black_color);
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.form_control:focus {
+  border: 1px solid var(--purple_color);
+}
+
+.forgo_password span {
+  font-size: 0.8rem;
+  color: var(--black_color);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sign_txt span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--purple_color);
+  cursor: pointer;
+}
+
+.sign_txt span:hover {
+  color: var(--lightpurple_color);
+}
+
+.inpt_grup label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.terms_use span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--black_color);
+}
+
+/* Media query Start */
+
+@media screen and (max-width: 1366px) {
+  .inpt_grup {
+    margin: 10px;
+  }
+  .form_control {
+    padding: 0.5rem;
+  }
+  .log_form {
+    height: 93%;
+  }
+  .log_btn {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .inpt_grup {
+    margin: 10px;
+  }
+
+  .form_control {
+    padding: 0.5rem;
+  }
+
+  .log_form {
+    height: 100%;
+  }
+
+  .log_btn {
+    padding: 0.5rem;
+  }
+
+  .con_form {
+    height: 65%;
+  }
+  .standing_line_break {
+    height: 86%;
+  }
+}
+
+@media screen and (max-width: 1026.4px) {
+  .con_form {
+    height: 58%;
+  }
+
+  .standing_line_break {
+    height: 87%;
+  }
+
+  .log_form {
+    height: 114%;
+  }
+
+  .log_img img {
+    margin-top: 11%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .con_form {
+    height: 58%;
+  }
+
+  .standing_line_break {
+    height: 56%;
+  }
+
+  .log_form {
+    height: 114%;
+  }
+}
+
+@media screen and (max-width: 885px) {
+  .dN_mob {
+    display: none !important;
+  }
+
+  .con_form {
+    height: 50vh;
+  }
+  .log_form {
+    width: auto;
+    height: 48vh;
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .dN_mob {
+    display: none !important;
+  }
+
+  .con_form {
+    height: 50vh;
+  }
+  .log_form {
+    width: auto;
+    height: 48vh;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .dN_mob {
+    display: none !important;
+  }
+
+  .con_form {
+    height: 56%;
+  }
+  .log_form {
+    width: auto;
+    height: 230%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .dN_mob {
+    display: none !important;
+  }
+
+  .con_form {
+    height: 55%;
+  }
+
+  .log_form {
+    height: 170%;
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .dN_mob {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .con_form {
+    height: 59%;
+    margin-top: 27%;
+  }
+  .log_form {
+    height: 143%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .con_form {
+    height: 57%;
+    margin-top: 27%;
+  }
+  .log_form {
+    height: 78%;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .con_form {
+    height: 55%;
+    margin-top: 27%;
+  }
+  .log_form {
+    height: 145%;
+  }
+}
+
+@media screen and (max-width: 391px) {
+  .con_form {
+    height: 56%;
+    margin-top: 27%;
+  }
+  .log_form {
+    height: 120%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .con_form {
+    height: 57%;
+    margin-top: 27%;
+  }
+  .log_form {
+    height: 78%;
+  }
+}
+
+@media screen and (max-width: 361px) {
+  .con_form {
+    height: 70%;
+    margin-top: 8%;
+  }
+  .log_form {
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .con_form {
+    height: 78%;
+    margin-top: 0;
+  }
+  .log_form {
+    height: 78vh;
+  }
+}
+
+/* Landscape styles */
+/* @media screen and (orientation: landscape) {
+  .dN_mob {
+    display: none !important;
+  }
+
+  .log_form {
+    height: 132%;
+    width: 100%;
+  }
+
+  .con_form {
+    height: 100%;
+    margin-top: 2%;
+  }
+} */
+
+/* Media query End */
